@@ -60,7 +60,10 @@ class BresenheimKreisAlgorithmus {
     }
 }
 
+let rechnungsZaehler = 1;
+
 document.getElementById('berechnen').addEventListener('click', () => {
+    document.getElementById('ergebnisse').value += `\n\n#################################\n####### Anfang Rechnung ${rechnungsZaehler} #######\n#################################\n\n`;
     new BresenheimKreisAlgorithmus(
         document.getElementById('xm').value,
         document.getElementById('ym').value,
@@ -69,4 +72,5 @@ document.getElementById('berechnen').addEventListener('click', () => {
         document.getElementById('y0').value,
         document.getElementById('n').value
     )
+    rechnungsZaehler++;
 });
